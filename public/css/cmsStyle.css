@@ -1,0 +1,2145 @@
+@font-face {
+    font-family: 'ETH';
+    src: url('ETH.ttf');
+}
+.alert{
+    font-family: 'ETH' !important;
+}
+
+.load{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all ease .5s;
+    overflow-y: auto;
+    z-index: 88000;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ETH' !important;
+}
+
+a {
+    outline: none !important;
+    border: none !important;
+    text-decoration: none !important;
+    color: black;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow-y: hidden;
+}
+
+.bigContainer{
+    display: flex;
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    background-color:#004080 ;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .areaUser{
+    flex:1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+header .areaFotoUser,.areaPermissoesMenu,.areaNotificacao{
+    flex: 1;
+}
+
+.areaNomePerfil{
+    flex: 2;
+}
+
+.areaFotoUser{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.areaFotoUser .fotoUser{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.fotoUser img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.areaNomePerfil{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 2;
+}
+
+.areaNomePerfil .nomePerfil{
+    font-size: 22px;
+    color: white;
+    font-family: 'ETH';
+    margin-left: 15px;
+}
+
+.areaPermissoesMenu{
+    display: flex;
+    align-items: center;
+}
+
+.permissoesMenu{
+    font-size: 22px;
+    color: white;
+    font-family: 'ETH';
+}
+
+.areaNotificacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listaNotificacoes a{
+    width: 100%;
+}
+
+.notificacao{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.notificacao a{
+    outline: none;
+
+}
+
+.notificacaoAlerta{
+    background-color: rgba(0, 220, 255, 0.82);
+    transition: all .5s linear;
+}
+
+.notificacaoNumero{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 220, 255, 0.82);
+    text-align: center;
+    font-family: 'ETH';
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+    left: 20px;
+}
+
+.listaNotificacoes{
+    width: 255px;
+    min-height: 420px;
+    max-height: 120px;
+    position: relative;
+    top: 60px;
+    right: 85px;
+    background-color: white;
+    z-index: 2000;
+    border: 1px solid #004080 ;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    transition: all .4s linear;
+    
+}
+
+.notificacaoItem{
+    width: 95%;
+    height: 55px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    margin-left: 5px;
+    border: 1px solid #004080;
+}
+
+.notificacaoItem:hover{
+    background-color: #004080;
+    border: 1px solid #004080;
+    
+}
+
+.notificacaoItem:hover .notificacaoTitulo{
+    color: white;
+}
+
+.notificacaoItem:hover .notificacaoMsg{
+    color: white;
+}
+
+.iconNotificacaoArea{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconNotificacao{
+    width: 30px;
+    height: 30px;
+}
+
+.conteudoNotificacao{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.notificacaoTitulo{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'ETH';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 2px;
+    color:#004080; 
+}
+
+.notificacaoMsg{
+    width: 100%;
+    height: 85%;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'ETH';
+    margin-top: 5px;
+    text-align: center;
+    color:#004080;
+}
+
+header .areaLogo{
+    flex:1;
+    display: flex;
+    
+    align-items: center;
+}
+
+header .areaLogo .logo{
+    width: 30%;
+    height: 80%;
+    margin-left: 25px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#Modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: all ease .5s;
+    overflow-y: auto;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modalBody{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #004080;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    cursor: default;
+}
+
+
+/*Template Layout*/
+.menuArea{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all .2s linear;
+}
+
+.menu{
+    width: 240px;
+    height: 100vh;
+    background-color: #004080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s linear;
+    z-index: 10000;
+    overflow-y: auto;
+}
+
+.menuOpen{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menuOpen .lineMenu{
+    width: 80%;
+    height: 5px;
+    background-color: #004080;
+}
+
+.menu nav{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+
+.menu ul li{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    align-items: center;
+    outline: none;
+    color: white;
+    font-size: 15px;
+}
+
+.selectedMenu{
+    width: 100%;
+    height:5px;
+    background-color: white;
+    margin-top: 2px;
+}
+
+.menu ul li .iconMenu{
+    width: 40px;
+    height: 45px;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.menu ul li:hover{
+    border-bottom: 2px solid white;
+}
+
+.page{
+    flex: 2;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.usuarioPage,.configPage,.eventosPage,.artigosPage,.verArtigoPage,.seoPage{
+    width: 100%;
+}
+
+/* Configuraçoes do Site Layout*/
+.containerConfig{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.miniSite{
+    width: 80%;
+    height: 78vh;
+    display: flex;
+    margin-top: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.miniMenu{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.miniMenu input{
+    cursor: pointer;
+}
+
+.miniMenu ul{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.miniMenu ul li{
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    display: flex;
+}
+
+.miniMenu ul li input{
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    border-color: #ced4da;
+    border: none;
+    outline: none;
+    transition: all .5s linear;
+    background-color: transparent;
+}
+
+.miniMenu ul li input:hover {
+    border-bottom:1px solid #ced4da;
+}
+
+.miniMenu .opcaoCores{
+    width: 80%;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2px;
+    margin: 5px;
+}
+
+.miniMenu .opcaoCores label{
+    margin: 0px;
+    margin-left: 5px;
+    text-align: center;
+    font-family: 'ETH';
+}
+    
+.miniSite .conteudoMiniSite{
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.miniSite .containerConteudoMiniSite{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.miniSite .logoEdit{
+    width: 80%;
+    height: 170px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.corPagina{
+    width: 135px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-family: 'ETH';
+}
+
+/* Layout Pagina Home*/
+
+.paginaHome{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    overflow-y: auto;
+
+}
+
+.containerFotosFavoritas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.fotoFavorita{
+    width: 260px;
+    max-height: 200px;
+    margin: 1px;
+}
+
+.estrelaFotoFavorita{
+    position: relative;
+    top: 5px;
+    left: 230px;
+    width: 15px;
+    height: 15px;
+    margin-bottom: -30px;
+    z-index: 1000;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+/*Layout pagina Sobre*/
+
+.paginaSobre{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginaSobre .bannerAbout{
+    width: 85%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#formSobre{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'ETH';
+}
+
+#formSobre #tituloSobre{
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    font-family: 'ETH';
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 25px;
+}
+
+#formSobre textarea{
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.paginaContato{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paginaContato .bannerContact{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#formContato{
+    width: 85%;
+    margin-top: 10px;
+    font-family: 'ETH';
+}
+
+
+#salvarConfig{
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    line-height: 10px;
+    margin-bottom: 5px;
+}
+
+.areaBtn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/*Layout Portfolio*/
+
+.areaVoltarBtn{
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+}
+
+.voltarPortfolio{
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #004080;
+    margin-left: 5px;
+    text-align: center;
+    font-family: 'ETH';
+    cursor: pointer;
+    margin-bottom: -30px;
+}
+
+.voltarPortfolio:hover{
+    background-color: white;
+    border: 1px solid #004080;
+}
+
+a:hover .voltarPortfolio {
+    color: #004080;
+}
+
+a .voltarPortfolio{
+    color:white;
+}
+
+.PortfolioPage{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerTimeLine{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lineTimeArea{
+    min-width: 100%;
+    height: 195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all .5s linear;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+.lineTimeArea:hover{
+    background-color: rgba(153, 153, 153, 0.1);
+}
+.albumArea{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    min-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.lineTimeArea h4{
+    width: 100%;
+}
+
+.albuns{
+    width: 205px;
+    height: 145px;
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.albumHover {
+    width: 205px;
+    height: 145px;
+    background-color: rgba(12, 11, 11, 0.0);
+    margin-top: -145px;
+    transition: all .4s linear;
+    border-bottom: 2px solid white;
+    top: 195px;
+    left: -185px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.verMais {
+    font-family: 'ETH';
+    width: 100%;
+    font-size: 55px;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    position: relative;
+    top: 15px;
+    transition: all .6s linear;
+}
+
+.albumHoverTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'ETH';
+    font-size: 20px;
+    opacity: 0;
+    transition: all .6s linear;
+    margin-top: 9px;
+    margin-left: -363px;
+    
+}
+
+.albuns:hover .albumHover {
+    background-color: rgba(12, 11, 11, 0.4);
+}
+
+.albuns:hover .albumHoverTitle {
+    opacity: 1;
+    margin-left: 0px;
+}
+
+.albuns:hover .verMais {
+    opacity: 1;
+}
+
+.btnInfoAlbum{
+    font-family: 'ETH';
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.infoAlbum{
+    position: absolute;
+    width: 180px;
+    height: 140px;
+    background-color: rgba(12, 11, 11, 0.8);
+    margin-top: 29px;
+    margin-left: 50px;
+    z-index: 4000;
+    color: white;
+    font-family: 'ETH';
+    display: none;
+    padding:5px;
+    overflow-x: hidden;
+}
+
+.barraInfo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.barraInfo .iconInfo{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+
+.conteudoInfo{
+    width: 90%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.btnInfoAlbum:hover ~ .infoAlbum{
+    display: block;
+    
+}
+
+.containerAddBtn{
+    position: fixed;
+    bottom: 0px;
+  
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addCategoria{
+    text-align: center;
+  
+    width: 95px;
+    height: 91px;
+    background-color: #004080;
+    color: white;
+    font-size: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    line-height: 75px;
+    font-size: 55px;
+}
+
+.addCategoria:hover{
+    background-color: blue;
+}
+
+.addAlbum {
+    width: 205px;
+    height: 145px;
+    background-color: #004080;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    line-height: 125px;
+    margin-left: 10px;
+    transition: all .2s linear;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.areaAlbumOpcoes{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -25px;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.btnOpcoesAlbum{
+    width: 20px;
+    height: 20px;
+    background-color: #004080;
+    z-index: 1000;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.albuns:hover .areaAlbumOpcoes{
+    opacity: 1;
+}
+
+.addAlbum:hover{
+    background-color:rgb(0, 17, 255) ;
+    color: white;
+    border: 1px solid #004080;
+    border-radius: 30px;
+}
+
+#formAlbum{
+    width: 60%;
+    font-family: 'ETH';
+}
+
+#formAlbum .areaFotoAlbum{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fotoAlbum{
+    width: 200px;
+    height: 90%;
+    border: 2px solid #004080;
+    background-color: #004080;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#fotoAlbum img{
+    border-radius: 25px;
+}
+
+.areaExcluirCategoria{
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+    top: 25px;
+}
+.excluirCategoria{
+    width: 20px;
+    height: 20px;
+    background-color: #004080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.excluirAlbum{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    cursor: pointer;
+    position: relative;
+    top: -125px;
+    right: -170px;
+    z-index: 1000;
+}
+
+/*Album Pagina*/
+.albumPage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Fotos Pagina*/
+.fotosPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.containerFotos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.fotos{
+    width: 280px;
+    margin: 1px;
+    cursor: pointer;
+    object-fit: contain
+}
+
+.areaFotosOpcoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -30px;
+}
+
+.areaBtnsMovimentacao{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: all .2s linear;  
+
+}
+
+.areaFotoFavorita{
+    flex: 1;
+    display: flex;
+}
+
+.areaFotoFavorita .favorita{
+    width: 25px;
+    height: 100%;
+    z-index: 1000;
+    margin-top:5px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.areaFotoFavorita .favorita:hover{
+    background-color: #004080;
+}
+
+.btnOpcoesFoto{
+    width: 28px;
+    height: 28px;
+    z-index: 1000;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top:5px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    background-color: #004080;
+    line-height: 28px;
+    text-align: center;
+
+}
+
+.btnOpcoesFoto:hover{
+    background-color: #004080;
+}
+
+.fotos:hover .areaFotosOpcoes .areaBtnsMovimentacao{
+    opacity: 1;
+}
+
+#addFoto{
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    bottom: 10px;
+    width: 90px;
+    height: 90px;
+    background-color: #004080;
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    line-height: 80px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+#addFoto:hover{
+    background-color:rgb(0, 17, 255) ;
+}
+
+.areaAddFoto{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formFotos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#escolherFoto{
+    width: 200px;
+    height: 100%;
+    border: 2px solid #004080;
+    background-color: #004080;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#escolherFoto:hover{
+    background-color:rgb(0, 17, 255) ;
+
+}
+
+.areaCloseAreaFotos{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10;
+}
+
+#closeAreaFotos{
+    width: 20px;
+    height: 100%;
+    font-size: 30px;
+    font-family: 'ETH';
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+#closeAreaFotos:hover{
+    color: red;
+}
+
+.areaListaFotos{
+    width: 80%;
+    height: 150px;
+    display: flex;
+    border: 2px solid #004080;
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.containerListaFotos{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004080;
+}
+
+.areaBtnFotosEscolhidas{
+    opacity: 1;
+    margin-bottom: -25px;
+}
+
+.fotoSelecionada{
+    width: 160px;
+    height: 100%;
+    margin:5px ;
+    border: 2px solid #004080;
+    background-color: #004080;
+    display: none;
+    flex-direction: column;
+}
+.areaBtnEnviarFoto{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    
+}
+
+#enviarFotos{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* Meu Perfil Layout*/
+.containerUsuario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.barraUserAdm{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: -80px;
+}
+
+.containerBarraUserAdm{
+    width: 25%;
+    height: 40px;
+    display: flex;
+    border: 1px solid blue;
+    margin-right: 10px;
+    z-index: 1000;
+
+}
+
+.opcaoBarraUser{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'ETH';
+    cursor: pointer;
+}
+
+.opcaoBarraUser a{
+    outline: none;
+    text-decoration: none;
+}
+
+.opcaoBarraUserSelected{
+    background-color: #004080;
+    color: white;
+}
+
+.areaPerfil{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+#formPerfil{
+    width: 30%;
+    font-family: 'ETH';
+}
+
+.fotoPerfilArea{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.fotoPerfil{
+    width: 160px;
+    height: 100%;
+    background-color: #004080;
+    cursor: pointer;
+}
+
+/* Usuarios Layout*/
+
+.containerUsers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.areaPermissoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 180px;
+    overflow-y: scroll;
+}
+
+#formAddUser label{
+    font-family: 'ETH'; 
+}
+
+.permissoes{
+    flex: 1;
+    font-family: 'ETH';
+    margin: 5px;
+}
+
+#addUsuario{
+    text-align: center;
+    bottom: 10px;
+    width: 95px;
+    height: 91px;
+    background-color: #004080;
+    color: white;
+    font-size: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    line-height: 75px;
+    font-size: 55px;
+}
+
+#addUsuario:hover{
+    background-color: blue;
+}
+
+thead{
+    background-color: #004080;
+    color: white;
+    border-spacing: 0px;
+    font-family: 'ETH';
+  
+}
+
+#tableUsuario{
+    margin-top: 80px;
+    width: 85%;
+    font-family: 'ETH';
+}
+
+.fotoPerfilTabela{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #004080;
+
+}
+
+.fotoPerfilTabela img{
+    border-radius: 20px;
+}
+
+/*Eventos Layout*/
+.containerEventos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tableEventos{
+    margin-top: 40px;
+    width: 98%;
+    font-family: 'ETH';
+    font-size: 14px;
+}
+
+.modal-bodyEvent{
+    font-family: 'ETH';
+}
+
+.areaDescricaoEvento{
+    width: 100%;
+    height: 120px;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+#filtragemForm{
+    width: 40%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'ETH';
+}
+
+/*Clientes Layout*/
+.containerClientes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.barraClientes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.containerBarraClientes{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    background-color: white;
+    border: 1px solid blue
+}
+
+.opcaoBarraCliente{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ETH';
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+    
+}
+.opcaoBarraClienteSelected{
+    background-color: #004080;
+    color: white !important;
+}
+
+
+#filtragemFormCliente{
+    width: 40%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ETH';
+}
+
+/*Layout Login*/
+.containerLogin{
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;   
+     flex-direction: column;
+}
+
+#formLogin{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #004080;
+    font-family: 'ETH';
+    color: white;
+    border-radius: 10px;
+}
+
+.logoLoginArea{
+    width: 40%;
+    height: 60px;
+    display: flex;
+    margin-bottom: 5px;
+    
+}
+
+.logoLoginP1{
+    flex: 1;
+    height: 100%;
+    font-family: 'ETH';
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 45px;
+      
+}
+
+.logoLoginP2{
+    flex: 1;
+    height: 100%;
+    font-family: 'ETH';
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    margin-left: 15px;
+    
+}
+
+#formLogin .form-group{
+    width: 70%;
+}
+
+#formLogin .form-control{
+    display: flex;
+    width: 100%;
+}
+
+#formLogin input{
+    width: 80%;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+#formLogin .form-group .iconCampo{
+    width: 20px;
+    height: 100%;
+}
+
+#formLogin label{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*Layout Artigos*/
+
+.containerArtigos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+}
+
+.containerBarraArtigo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;    
+}
+
+.barraArtigo{
+    width: 40%;
+    display: flex;
+    border: 1px solid #004080;
+}
+
+.opcaoBarraArtigo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'ETH';
+    cursor: pointer;
+}
+
+.barraArtigoSelected{
+    background-color: #004080;
+    color: white;
+}
+
+#formPesquisa{
+    margin-top: 20px;
+    width: 40%;
+    font-family: 'ETH';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formPesquisa .form-group{
+    flex: 1;
+    margin-right: 5px;
+    font-family: 'ETH';
+}
+
+.form-group{
+    font-family: 'ETH';
+}
+
+.artigo{
+    width: 90%;
+    height: 250px;
+    background-color: teal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	background-size: cover;
+    background-position: center;
+}
+
+.artigo .artigoLink{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0,0,0,0.4);
+}
+.urlArtigo{
+    width: 100%;
+    position: relative;
+    bottom: -50px;
+    left: 5px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all .5s linear;
+    font-family: 'ETH';
+
+}
+.artigoLink h3{
+    font-weight: bold;
+}
+
+.artigo:hover .infoArtigo{
+    opacity: 1;
+}
+
+.artigo:hover .btnArtigo{
+    opacity: 1;
+}
+
+.artigo:hover #statusArtigoForm{
+    opacity: 1;
+}
+
+.artigo:hover .urlArtigo{
+    opacity: 1;
+}
+
+.artigo:hover .verArtigo{
+    opacity: 1;
+}
+
+.areaAcoes{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -30px;
+}
+
+.areaAcoes .areaBtnAcoes{
+    width: 530px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.areaBtnAcoes .btnArtigo{
+    width: 30px;
+    height: 30px;
+    background-color: #004080;
+    padding: 5px;
+    display: flex;
+    opacity: 0;
+    transition: all .5s linear;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+.modalObservacao{
+    width: 350px;
+    height: 180px;
+    position: relative;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 15px;
+    transition: all .5s linear;
+    opacity: 0;
+    padding: 10px;
+    padding-bottom: 35px;
+    display: none;
+}
+
+.formObservacao{
+    width: 100%;
+    height: 100%;
+}
+
+.formObservacao textarea{
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+}
+
+.infoArtigo{
+    width: 200px;
+    height: 50px;
+    text-align: end;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    margin-right: 15px;
+    transition: all .5s linear;
+}
+
+.infoArtigo .info{
+    flex: 1;
+    font-family: 'ETH';
+    color: white;
+}
+
+
+.areaInfoArtigo{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.descricaoArtigo{
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    font-size: 18px;
+}
+
+.areaBtnArtigo{
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: -40px;
+}
+
+
+.addArtigo{
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    background-color: #004080;
+    color: white;
+    line-height: 50px;
+    font-size: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 80px;
+    right: 25px;
+}
+
+.addArtigo:hover{
+    background-color: blue;
+}
+
+.areaFotoArtigo{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+#fotoArtigo{
+    width: 40%;
+    height: 100%;
+    background-color: #004080;
+    cursor: pointer;
+    font-family: 'ETH';
+}
+
+#fotoArtigo:hover{
+    background-color: blue;
+}
+
+.containerEdicaoArtigo, .containerVisualizaçãoArtigo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#formVerArtigo{
+    width: 50%;
+    font-family: 'ETH';
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.areaCriacaoArtigo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaCriacaoArtigo textarea{
+    width: 100%;
+}
+
+.areaArquivos{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconArquivo{
+    width: 25px;
+    height: 25px;
+}
+
+.areaAddArquivo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    border-bottom: 1px solid #004080;
+    padding-bottom: 10px; 
+}
+
+.addArquivo{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #004080;
+    color:white;
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.addArquivo:hover{
+    background-color: blue;
+}
+
+.areaStatusArtigo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    border-bottom: 1px solid #004080;
+    padding-bottom: 10px; 
+}
+
+.formStatus{
+    width: 80%;
+}
+
+.formStatusSoVer{
+    width: 70%
+}
+
+.conteudoFormStatus{
+    width: 100%;
+    display: flex;
+}
+
+.formStatus .ladoEsquerdo,.ladoDireito{
+    flex: 1;
+    
+}
+
+.formStatus .ladoEsquerdo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formStatus .ladoDireito{
+    display: flex;
+    flex-direction: column;
+    font-family: 'ETH';
+}
+
+#formStatus .ladoEsquerdo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.areaObservacao{
+    width: 60%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    border:1px solid gray;
+    font-family: 'ETH';
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin: auto;
+    word-break: break-all;
+
+}
+
+.containerVerArtigo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bannerArtigo {
+    height: 600px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bannerInfoArtigo {
+    width: 100%;
+    height: 100%;
+}
+
+.bannerArtigoTitulo{
+    align-items: flex-end;
+}
+
+.bannerArtigoDescricao{
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+
+.conteudoArtigo{
+    width: 95%;
+    font-family: 'ETH';
+    margin-top: 50px;
+}
+
+.containerAreaArquivos{
+    width: 95%;
+    display: flex;
+}
+
+.areaArquivos{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.areaArquivos .arquivos{
+    width: 100%;
+    height: 20px;
+    font-family: 'ETH';
+    font-size: 18px;
+}
+
+
+.areaAutor{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-family: 'ETH';
+}
+
+.autor{
+    margin-left: 10px;
+}
+
+.areaContainerDepoimentos{
+    width: 80%;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#slideDepoimentos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formDepoimento{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ETH';
+}
+
+.formDepoimento .form-group{
+    width: 60%;
+}
+
+.formDepoimento label{
+    font-size: 25px;
+}
+
+.areaDeletarDepoimento{
+    width: 80%;
+    height:35px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2000;
+}
+
+.iconExcluirDepoimento{
+    width: 40px;
+    height: 100%;
+    background-color: #004080;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 105px;
+}
+
+.iconExcluirDepoimento:hover{
+    background-color: blue;
+}
+
+.addDepoimento{
+    position: absolute;
+    /*left: 80px;*/
+    text-align: center;
+    bottom: 2px;
+    width: 65px;
+    height: 65px;
+    background-color: #004080;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    line-height: 50px;
+    font-size: 45px;
+}
+
+.addDepoimento:hover{
+    background-color: blue;
+    color: white;
+}
+
+/*SEO Layout*/
+.containerSeo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.containerSeo form{
+    width: 60%;
+    font-family: 'ETH';
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerSeo form .form-group{
+    width: 60%;
+}
+
+.containerSeo form input[type='submit']{
+    width: 60%;
+    margin-top: 25px;
+}
+
+.containerPalavrasChave{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#campoPalavraChave{
+    width: 10px;
+    margin-right: -10px;    
+}
+
+.areaPalavrasChave{
+    width: 410px;
+    min-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ced4da;
+    z-index: 10000;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.areaInserirPalavraChave{
+    width: 400px;
+    height: 40px;
+    display: flex;
+    margin-left: 10px;
+}
+
+#palavraChaveInserir{
+    width: 200px;
+    outline: none;
+    box-shadow: 0 0 0;
+    border-color: #ced4da;
+    box-shadow: 0 0 0 0 !important;
+    outline: 0 !important;
+}
+
+.blocoPalavra{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: gray;
+    margin: 2px;
+    line-height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid #ced4da;
+    display: flex;
+}
+
+.blocoPalavra .palavra{
+    flex: 2;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+}
+
+.blocoPalavra .apagar{
+    flex: 1;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+}
+
+.blocoPalavra .apagar:hover{
+    background-color: rgb(179, 10, 10);
+    color: white;
+    
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: http://marcossousafotografia.com/sitemap.xml
+Disallow:/Admin
+Disallow:/Admin/

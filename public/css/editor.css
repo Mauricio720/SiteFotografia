@@ -1,0 +1,228 @@
+@font-face {
+    font-family: '1900805';
+    src: url('1900805.ttf');
+}
+
+.close{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.blockStyle__btnStyle{
+    position: absolute;
+    font-family: '1900805';
+    color: black;
+    width: 125px;
+    font-size: 20px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.blockStyle__btnAddHtml{
+    top: -30px;
+    left: 5px;
+}
+
+.editorBlog{
+    border: 1px solid #ccc;
+    width: 98%;
+    min-height: 400px;
+    margin-bottom: 70px;
+    margin-top: 185px;
+}
+
+.editorBlog-header{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin-bottom: 15px;
+    padding: 20px;
+    position: absolute;
+    z-index: 10000;
+    top: 120px;
+    left: 18%;
+    background: rgb(239 239 239);
+
+}
+
+.editorBlog-header__content{
+    display: flex;
+    border: 1px solid #ccc;
+}
+
+.editorBlog__slot{
+    width: 140px;
+    height: 120px;
+    margin: 2px;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+    line-height: 160px;
+    font-size: 135px;
+    font-family: '1900805';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.editorBlog__slot:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+.htmlSlot{
+    background-color:rgb(241, 241, 241);
+}
+
+.blockStyle{
+    display: none;
+    width: 94%;
+    min-height: 200px;
+    border: 2px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 25px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.blockStyle__close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.blockStyle__btnStyle{
+    display: none;
+}
+
+.blockContent--image__header{
+    width: 23px;
+    height: 100%;
+    display: flex;
+    color: white;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 10px;
+
+}
+
+.blockContent--image__header--slot{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    font-size: 25px;
+    line-height: 6px;
+    margin: 5px;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.blockContent--image__header--slot:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+
+.blockStyle__blockContent{
+    margin: 1px;
+    flex: 1;
+    word-wrap: break-word;
+    position: relative;
+    min-height: 200px;
+}
+
+.blockStyle__content-group{
+    width: 100%;
+    display: flex;
+    margin: 10px;
+}
+
+.blockStyle__content-group--imagesGrid{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit,minmax(250px,1fr));;
+}
+
+.blockStyle__btnClearHtml{
+    display: none;
+    top: -30px;
+    right: 10px;
+    position: absolute;
+}
+
+.blockStyle__blockContent p, div, blockquote{
+    word-break: break-word;
+}
+
+.editorModal__close{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.blockStyle__blockContent--image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.blockStyle__image{
+    width: 350px;
+    background-size: contain;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.btnEditor{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    line-height: 60px;
+    background-color: white;
+    border-radius: 40px;
+    color: black;
+    font-family: '1900805';
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.editorModal{
+    display: none;
+    width: 600px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 100px;
+    overflow-y: auto;
+    z-index: 100;
+    background-color: white;
+}
+
+.editorModal__header{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+}

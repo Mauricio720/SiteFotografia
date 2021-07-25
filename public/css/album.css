@@ -1,0 +1,107 @@
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.titulo{
+    margin-top: 45px;
+    font-family: 'ETH';
+    margin-left: 15px;
+}
+
+.fichaTecnica{
+    max-width: 1200px;
+    width: 75%;
+    margin-left: 15px;
+}
+
+.carouselAlbum{
+    max-width: 1200px;
+    margin-top: 15px;
+    width: 75%;
+    margin-bottom: 45px;
+}
+
+.areaCompartilhar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.areaCompartilhar__conteudo{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaCompartilhar__icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.comentarios{
+    max-width: 1200px;
+    width: 95%;
+    height: 280px;
+    margin-top: 5%;
+    overflow-y: auto;
+    background-color: white;
+    margin-left: 15px;
+}
+
+.containerOutrosAlbuns{
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.outrosAlbuns{
+    width: 295px;
+    height: 196px;
+    margin: 1px;
+}
+
+.albumalbum{
+    margin: 1px;
+    display: flex;
+    width:  283px;
+    position: relative;
+    transition: all .5s linear;
+    margin: 1px;
+}
+
+@media (min-width:480px) and (max-width:1020px) {
+    .containerOutrosAlbuns {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media(max-width:480px){
+    .carouselAlbum{
+        width: 100%;
+    }
+
+    .fichaTecnica{
+        width: 95%;
+    }
+    
+    .carousel_img {
+       height: 600px;
+    }
+    .containerOutrosAlbuns {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}

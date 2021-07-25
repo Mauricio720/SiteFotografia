@@ -1,0 +1,22 @@
+
+.containerSobre{
+    width: 100%;
+    background-color: white;
+}
+
+.containerSobre__texto{
+    width: 95%;
+    font-family: 'ETH';
+    background-color: white;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+@media (max-width:480px){
+    .containerSobre__texto{
+        width: 98%;
+        margin-left: 5px;
+    }
+    
+}
+

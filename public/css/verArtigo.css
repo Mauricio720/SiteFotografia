@@ -1,0 +1,177 @@
+.bannerHover{
+    width: 100%;
+    height: 73vh;
+    background-color: rgb(0,0,0,0.4);
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bannerHover__item{
+    font-size: 25px;
+    font-family: 'ETH';
+    color: white;
+    text-align: center;
+}
+
+.bannerHover__item--titulo{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.bannerHover__item--descricao{
+    width: 60%;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.containerArtigo{
+    width: 100%;
+    background-color: white;
+    margin-bottom: 70px;
+}
+
+.conteudoArtigo{
+    width: 95%;
+    margin: auto;
+    max-width: 1125px;
+}
+
+.conteudoArtigo__autor{
+    width: 100%;
+    text-align: end;
+    font-family: 'ETH';
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.areaCompartilhar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.areaCompartilhar__conteudo{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaCompartilhar__icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.compartilhe{
+    font-family: 'ETH';
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 8px;
+}
+
+.areaArquivos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.areaArquivos .arquivos{
+    width: 100%;
+    height: 20px;
+    font-family: 'ETH';
+    font-size: 18px;
+    color: blue;
+}
+
+.containerOutrosArtigos{
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.areaOutrosArtigos{
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+}
+
+.outrosArtigos{
+    width: 295px;
+    height: 196px;
+    margin: 1px;
+    background-position: center;
+    background-size: cover;
+}
+
+.outrosArtigos__hover{
+    width: 100%;
+    height: 196px;
+    flex-direction: column;
+    background-color: rgb(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outrosArtigos__item{
+    color: white;
+    font-family: 'ETH';
+}
+
+.outrosArtigos--titulo{
+    font-size: 20px;
+    white-space: normal;
+    text-align: center;
+}
+.outrosArtigos--descricao{
+    font-size: 15px;
+}
+
+
+@media (min-width:480px) and (max-width:1020px) {
+    .containerOutrosArtigos {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .bannerHover__item--descricao {
+        width: 85%;
+    }
+}
+
+@media(max-width:480px){
+    
+    .containerOutrosArtigos {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .bannerHover__item--descricao {
+        width: 95%;
+    }
+
+    .conteudoArtigo{
+        width: 100%;
+    }
+}
