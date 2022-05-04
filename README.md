@@ -7,7 +7,7 @@ A versão desse repositório não consta os antigos commits que eu utilizei dura
 
 # Instalação 
 
-Primeiramente use o composer update ou composer install para criar a pasta vendor. Após isso importe o arquivo sql bdfotografia.sql no seu banco de dados (Não fiz o uso de migrations por não conhecer ainda). Ao fazer isso, vá no arquivo .env.exemple e mude as configurações para as escolhidas por você. As principais são as citadas abaixo:
+Primeiramente use o composer update ou composer install para criar a pasta vendor. Também execute o comando npm install por conta dos pacotes em Node. Após isso importe o arquivo sql bdfotografia.sql no seu banco de dados (Não fiz o uso de migrations por não conhecer ainda). Ao fazer isso, vá no arquivo .env.exemple e mude as configurações para as escolhidas por você. As principais são as citadas abaixo:
 
 # ENV Configurações
 ### API_URL="url local ou da hospedagem" 
