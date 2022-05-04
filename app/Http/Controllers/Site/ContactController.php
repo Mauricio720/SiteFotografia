@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\DB;
 class ContactController extends Controller
 {
     public function __invoke(){
-        $dataAtual=Carbon::now()->format('yy-m-d');
+        $dataAtual=Carbon::now()->format('Y-m-d');
         return view('Site.contato',['dataAtual'=>$dataAtual]);
     }
 
@@ -22,7 +22,7 @@ class ContactController extends Controller
      public function cadastrarEventoECliente(Request $request){
         $dadosPOST=$request->only(['nome','email','telefone','descricaoEvento'
             ,'dataEvento','comoEncontrou']);
-        $dataAtual=Carbon::now()->format('yy-m-d');    
+        $dataAtual=Carbon::now()->format('Y-m-d');    
         
         $this->validator($dadosPOST,$dataAtual);
         
@@ -36,7 +36,7 @@ class ContactController extends Controller
             $comoEncontrou=$request->input('comoEncontrou');
            
             if($this->verificarEmailExistente($email) != null && $request->missing('idCliente')){
-                $dataAtual=Carbon::now()->format('yy-m-d');
+                $dataAtual=Carbon::now()->format('Y-m-d');
                 $cliente=Cliente::where('email',$email)->first();   
                 return view('Site.contato',['emailJaRegistrado'=>true,
                     'dataAtual'=>$dataAtual,'cliente'=>$cliente,
@@ -90,8 +90,7 @@ class ContactController extends Controller
         $cliente->save();
     }
 
-    private function cadastrarEvento(int $idCliente,String $dataEvento,String $descricaoEvento,
-        String $comoEncontrou=""){
+    private function cadastrarEvento($idCliente,$dataEvento,$descricaoEvento,$comoEncontrou=""){
             $evento=new Evento();
             $evento->idCliente=$idCliente;
             $evento->dataEvento=$dataEvento;

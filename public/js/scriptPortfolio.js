@@ -66,7 +66,6 @@ function arrastarAlbunsParaEsquerda(lineTime){
     .getPropertyValue('margin-left'));
     let albuns=lineTime.querySelectorAll('.albumConteudo__album');
     quantdAlbum=albuns.length;
-    console.log(lineTime);
     lineTime.nextElementSibling.style.display="flex";
     lineTime.style.marginLeft=(marginLeftAlbum+larguraAlbum)+quantdAlbum+'px';
     marginLeftAlbum= marginLeftAlbum+larguraAlbum+quantdAlbum;

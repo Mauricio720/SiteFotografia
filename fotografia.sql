@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Jul-2021 às 01:10
--- Versão do servidor: 10.4.19-MariaDB
--- versão do PHP: 7.3.28
+-- Tempo de geração: 04-Maio-2022 às 19:59
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bdfotografia`
+-- Banco de dados: `fotografia`
 --
 
 -- --------------------------------------------------------
@@ -44,13 +44,6 @@ CREATE TABLE `tbalbumfoto` (
   `tituloFoto` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `tbalbumfoto`
---
-
-INSERT INTO `tbalbumfoto` (`idAlbum`, `dataCriacao`, `horaCriacao`, `fotoCapa`, `idUsuario`, `tituloAlbum`, `urlAlbum`, `idCategoria`, `dataEvento`, `slug`, `descricaoAlbum`, `view`, `curtida`, `tituloFoto`) VALUES
-(32, '2021-01-12', '16:44:09', 'imagens/albuns/ENSAIO-DE-CASAL/sdafffffffff/fotoCapa/IMG_7452.jpg', 1, 'sdafffffffff', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff', 12, '2021-01-30', 'Teste-editado', 'adsffffffffff', 333, 0, 'IMG_7452.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -64,13 +57,6 @@ CREATE TABLE `tbarquivosartigos` (
   `idArtigo` int(11) NOT NULL DEFAULT 0,
   `nomeArquivo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `tbarquivosartigos`
---
-
-INSERT INTO `tbarquivosartigos` (`idArquivoArtigo`, `descricaoLink`, `urlArquivo`, `idArtigo`, `nomeArquivo`) VALUES
-(1, 'Baixe aqui seu arquivo', 'imagens/artigos/QUAL_MOMENTO_IDEAL_PARA_FAZER_O_ENSAIO_GESTANTE_LALALA_OLAAAAAAAA/arquivosArtigo/duvidas.txt', 24, 'duvidas.txt');
 
 -- --------------------------------------------------------
 
@@ -134,13 +120,6 @@ CREATE TABLE `tbcategoriaalbum` (
   `nomeCategoria` varchar(50) NOT NULL DEFAULT '0',
   `slugCategoria` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `tbcategoriaalbum`
---
-
-INSERT INTO `tbcategoriaalbum` (`idCategoria`, `nomeCategoria`, `slugCategoria`) VALUES
-(12, 'ENSAIO DE CASAL', 'ENSAIO-DE-CASAL');
 
 -- --------------------------------------------------------
 
@@ -224,13 +203,6 @@ CREATE TABLE `tbdepoimentos` (
   `idUsuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `tbdepoimentos`
---
-
-INSERT INTO `tbdepoimentos` (`idDepoimento`, `depoimento`, `autor`, `dataDepoimento`, `horaDepoimento`, `idUsuario`) VALUES
-(2, '<p>Nossa experiencia com o Marcos foi incrivel. O resultado das fotos nos surpreendeu. &Eacute; o tipo de fotografo que te deixa bem a vontade e o ensaio fica bem descontraido</p>', 'mauricio', '2021-04-07', '12:13:04', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -261,13 +233,6 @@ CREATE TABLE `tbfichatecnica` (
   `html` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `tbfichatecnica`
---
-
-INSERT INTO `tbfichatecnica` (`idFichaTecnica`, `idAlbum`, `html`) VALUES
-(32, 32, '<p>dfsafffffffffff</p>');
-
 -- --------------------------------------------------------
 
 --
@@ -287,20 +252,6 @@ CREATE TABLE `tbfotos` (
   `horaFavoritada` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `tbfotos`
---
-
-INSERT INTO `tbfotos` (`idFoto`, `tituloFoto`, `caminhoFoto`, `idAlbum`, `dataAdicao`, `horaAdicao`, `idUsuario`, `favorita`, `dataFavoritada`, `horaFavoritada`) VALUES
-(18, 'IMG_7205-Editar.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7205-Editar.jpg', 32, '2021-01-12', '16:44:25', 1, 0, NULL, NULL),
-(19, 'IMG_7232-Editar.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7232-Editar.jpg', 32, '2021-01-12', '16:44:25', 1, 1, '2021-01-12', '16:47:47'),
-(20, 'IMG_7259-Editar.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7259-Editar.jpg', 32, '2021-01-12', '16:44:25', 1, 0, NULL, NULL),
-(21, 'IMG_7262-Editar.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7262-Editar.jpg', 32, '2021-01-12', '16:44:25', 1, 0, NULL, NULL),
-(22, 'IMG_7266-Editar.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7266-Editar.jpg', 32, '2021-01-12', '16:44:25', 1, 1, '2021-01-12', '16:47:53'),
-(23, 'IMG_7291-Editar 3.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7291-Editar 3.jpg', 32, '2021-01-12', '16:44:25', 1, 1, '2021-01-12', '16:47:51'),
-(24, 'IMG_7302-Editar.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7302-Editar.jpg', 32, '2021-01-12', '16:44:25', 1, 1, '2021-01-12', '16:47:49'),
-(25, 'IMG_7326-Editar.jpg', 'imagens/albuns/ENSAIO DE CASAL/sdafffffffff/fotosAlbum/IMG_7326-Editar.jpg', 32, '2021-01-12', '16:44:25', 1, 0, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -313,15 +264,6 @@ CREATE TABLE `tbimagensartigo` (
   `idArtigo` int(11) NOT NULL DEFAULT 0,
   `nomeImagem` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `tbimagensartigo`
---
-
-INSERT INTO `tbimagensartigo` (`idimagensArtigo`, `urlImagem`, `idArtigo`, `nomeImagem`) VALUES
-(1, 'imagens/artigos/SADDDDDDDDDDDDDDDD/fotosArtigo/Ensaio_Gestante_Gestação_Fotografia_de_gravida_Por_do_Sol_Pedra_Grande_Atibaia-3.jpg', 42, 'Ensaio_Gestante_Gestação_Fotografia_de_gravida_Por_do_Sol_Pedra_Grande_Atibaia-3.jpg'),
-(3, 'imagens/artigos/SADDDDDDDDDDDDDDDD/fotosArtigo/Ensaio_Gestante_Gestação_Fotografia_de_gravida_Por_do_Sol_Pedra_Grande_Atibaia-3.jpg', 42, 'Ensaio_Gestante_Gestação_Fotografia_de_gravida_Por_do_Sol_Pedra_Grande_Atibaia-3.jpg'),
-(4, 'imagens/artigos/SADDDDDDDDDDDDDDDD/fotosArtigo/Ensaio_Gestante_Gestação_Fotografia_de_gravida_Por_do_Sol_Pedra_Grande_Atibaia-6.jpg', 42, 'Ensaio_Gestante_Gestação_Fotografia_de_gravida_Por_do_Sol_Pedra_Grande_Atibaia-6.jpg');
 
 -- --------------------------------------------------------
 
@@ -551,7 +493,7 @@ ALTER TABLE `tbconfigsite`
 -- AUTO_INCREMENT de tabela `tbdepoimentos`
 --
 ALTER TABLE `tbdepoimentos`
-  MODIFY `idDepoimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idDepoimento` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tbeventos`
@@ -563,19 +505,19 @@ ALTER TABLE `tbeventos`
 -- AUTO_INCREMENT de tabela `tbfichatecnica`
 --
 ALTER TABLE `tbfichatecnica`
-  MODIFY `idFichaTecnica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `idFichaTecnica` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tbfotos`
 --
 ALTER TABLE `tbfotos`
-  MODIFY `idFoto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `idFoto` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tbimagensartigo`
 --
 ALTER TABLE `tbimagensartigo`
-  MODIFY `idimagensArtigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idimagensArtigo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tbmenus`

@@ -12,8 +12,6 @@ var change=0;
 ONLY_HTMLELEMENT('#escolherFoto').addEventListener('click',(e)=>{
 	e.preventDefault();
 	$('#fotosFile').trigger('click');
-
-	
 });
 
 
@@ -28,9 +26,7 @@ let excluirFoto=ALL_HTMLELEMENT('.excluirFotoBtn');
         modal.querySelector('#confirmarModal').addEventListener('click',(e)=>{
             window.location = item.href; 
         })
-    
     })
-    
 })
 
 
